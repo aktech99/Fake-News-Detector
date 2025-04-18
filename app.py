@@ -5,9 +5,10 @@ from newspaper import Article
 from bs4 import BeautifulSoup
 
 # --- API KEYS ---
-FACT_CHECK_API_KEY = "AIzaSyD11k1-GMTDun8Vh-OxV9bXBlY0d3lRmOk"
-GEMINI_API_KEY = "AIzaSyAw1u_V1Kfb-p-aU68lbGEBkB_LNBQmao4"
-NEWS_API_KEY = "9283e95345bf4fffbbb1c699c1d64f99"
+FACT_CHECK_API_KEY = st.secrets["FACT_CHECK_API_KEY"]
+GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
+NEWS_API_KEY = st.secrets["NEWS_API_KEY"]
+
 
 genai.configure(api_key=GEMINI_API_KEY)
 gemini_model = genai.GenerativeModel(model_name="models/gemini-1.5-flash")
